@@ -73,12 +73,12 @@ https://templatemo.com/tm-551-stand-blog
                   {% if request.user.is_authenticated %}
                       <div class="d-flex">
                           <a class="nav-link" href="">{{ request.user.username }}</a>
-                      <a href="/logout"><span class="badge badge-danger mt-2">logout</span></a>
+                      <a href={% url 'account:logout' %}><span class="badge badge-danger mt-2">logout</span></a>
                       </div>
                   {% else %}
                       <div class="d-flex" >
-                      <a class="nav-link" href="/login">login</a> __
-                      <a class="nav-link" href="/register">register</a>
+                      <a class="nav-link" href={% url 'account:login' %}>login</a> __
+                      <a class="nav-link" href={% url 'account:register' %}>register</a>
                       </div>
                   {% endif %}
               </li>
