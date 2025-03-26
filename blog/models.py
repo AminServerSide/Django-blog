@@ -18,6 +18,8 @@ class Article(models.Model):
     image = models.ImageField(upload_to='images/articles')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    is_published = models.BooleanField(default=True)
+    myfile = models.BinaryField(null=True)
 
 
     def __str__(self):
