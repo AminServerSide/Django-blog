@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6347769b-e22a-4c72-87c4-5e4bdb279e10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images/icons/index.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/article_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProject/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home_app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -56,7 +55,7 @@
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/A.N/Desktop/djangoproject/static/images/icons",
+    "last_opened_file_path": "C:/Users/A.N/Desktop/djangoproject/blog/templates/blog",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,11 +66,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\A.N\Desktop\djangoproject\blog\templates\blog" />
       <recent name="C:\Users\A.N\Desktop\djangoproject\static\images\icons" />
       <recent name="C:\Users\A.N\Desktop\djangoproject\static\vendor" />
       <recent name="C:\Users\A.N\Desktop\djangoproject\static\js" />
       <recent name="C:\Users\A.N\Desktop\djangoproject\static\images" />
-      <recent name="C:\Users\A.N\Desktop\djangoproject\static\fonts" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.DjangoProject">
@@ -162,7 +161,8 @@
       <workItem from="1742854386570" duration="3682000" />
       <workItem from="1742912441915" duration="3336000" />
       <workItem from="1742933499219" duration="4397000" />
-      <workItem from="1742988545226" duration="8011000" />
+      <workItem from="1742988545226" duration="8045000" />
+      <workItem from="1743019844013" duration="8276000" />
     </task>
     <servers />
   </component>
