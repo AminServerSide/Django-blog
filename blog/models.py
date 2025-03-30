@@ -22,6 +22,9 @@ class Article(models.Model):
     is_published = models.BooleanField(default=True)
     slug = models.SlugField(blank=True , unique=True)
 
+    class Meta:
+        ordering = ('-updated','-created')
+
 
     def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
         self.slug = slugify(self.title)
