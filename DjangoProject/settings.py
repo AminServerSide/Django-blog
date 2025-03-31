@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'blog.apps.BlogConfig',
     'django_cleanup.apps.CleanupConfig',
+    'django_render_partial',
 ]
 
 

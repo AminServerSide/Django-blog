@@ -12,15 +12,16 @@ class Category(models.Model):
         return self.title
 
 class Article(models.Model):
-    author = models.ForeignKey(User , on_delete=models.SET_NULL, null=True , blank=True)
+    author = models.ForeignKey(User , on_delete=models.SET_NULL, null=True , blank=True , related_name='articles')
     title = models.CharField(max_length=80)
-    category = models.ManyToManyField(Category)
+    category = models.ManyToManyField(Category , related_name="articles")
     body = models.TextField()
     image = models.ImageField(upload_to='images/articles')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
     slug = models.SlugField(blank=True , unique=True)
+    objects = models.Manager()
 
     class Meta:
         ordering = ('-updated','-created')
