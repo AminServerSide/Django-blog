@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
+from django.utils.html import format_html
 from django.utils.text import slugify
 
 class Category(models.Model):
@@ -16,7 +17,7 @@ class Article(models.Model):
     title = models.CharField(max_length=80)
     category = models.ManyToManyField(Category , related_name="articles")
     body = models.TextField()
-    image = models.ImageField(upload_to='images/articles')
+    image = models.ImageField(upload_to='images/articles' , null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
@@ -35,6 +36,10 @@ class Article(models.Model):
         return reverse('blog:article_detail', kwargs={'slug': self.slug})
 
 
+    def show_image(self):
+        if self.image:
+            return format_html(f'<img src="{self.image.url}" width="50px" height="50px" >')
+        return format_html('<h3 style="color: red">no image</h3>')
 
 
     def __str__(self):

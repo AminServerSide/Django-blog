@@ -6,7 +6,8 @@ from . import models
 class ArticleAdmin(admin.ModelAdmin):
     list_filter = ["is_published"]
     ordering = ("title",)  # Default ordering (A-Z)
-    list_display = ("title", "short_body", "is_published")
+    list_display = ("title", "short_body", "is_published" , "show_image")
+    search_fields = ["title" , "body"]
 
     def short_body(self, obj):
         return " ".join(obj.body.split()[:30]) + "..." if len(obj.body.split()) > 30 else obj.body
