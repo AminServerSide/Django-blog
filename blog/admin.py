@@ -44,4 +44,9 @@ class MessageAdmin(admin.ModelAdmin):
     short_text.short_description = "Text Preview"
 
 
-admin.site.register(models.Like)
+@admin.register(models.Like)
+class Like(admin.ModelAdmin):
+    ordering = ("-created",)  # Ordering as defined in the model Meta class
+    list_display = ("user", "article", "created")
+    search_fields = ["user__username", "article__title"]
+    list_filter = ["created"]  # Added filter for better date-based search

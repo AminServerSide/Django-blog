@@ -9,5 +9,6 @@ urlpatterns = [
     path('search/', views.search, name='search_articles'),
     path('contactus', views.contactus, name='contact_us'),
     path('like/<slug:slug>/<int:pk>', views.like, name='like'),
+    path('about/', views.about_us, name='about_us'),
 
 ]

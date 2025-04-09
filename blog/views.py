@@ -64,7 +64,8 @@ def like(request , slug , pk):
         return JsonResponse({'response' : "liked"})
 
 
-
+def about_us(request):
+    return render(request, "blog/about_us.html")
 
 
 
