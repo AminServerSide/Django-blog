@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article, Category, Comment, Message
+from .models import Article, Category, Comment, Message , Like
 from . import models
 
 @admin.register(models.Article)
@@ -42,3 +42,6 @@ class MessageAdmin(admin.ModelAdmin):
         return " ".join(obj.text.split()[:30]) + "..." if len(obj.text.split()) > 30 else obj.text
 
     short_text.short_description = "Text Preview"
+
+
+admin.site.register(models.Like)

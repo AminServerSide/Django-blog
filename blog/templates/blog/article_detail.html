@@ -45,9 +45,21 @@
                         <div class="row">
                           <div class="col-6">
                             <ul class="post-tags">
-                              <li><i class="fa fa-tags"></i></li>
-                              <li><a href="#">Best Templates</a>,</li>
-                              <li><a href="#">TemplateMo</a></li>
+                                {% if is_liked %}
+                                     <li>
+                                         <a onclick="like('{{ article.slug }}', '{{ article.id }}')">
+                                             <i id="like" class="fa fa-heart" style="font-size: 20px"></i>
+                                         </a>
+                                         <span id="count">{{ article.likes.all.count }}</span>
+                                     </li>
+                                     {% else %}
+                                     <li>
+                                         <a onclick="like('{{ article.slug }}', '{{ article.id }}')">
+                                             <i id="like" class="fa fa-heart-o" style="font-size: 20px"></i>
+                                         </a>
+                                         <span id="count">{{ article.likes.all.count }}</span>
+                                     </li>
+                                {% endif %}
                             </ul>
                           </div>
                           <div class="col-6">

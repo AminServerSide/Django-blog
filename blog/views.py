@@ -1,8 +1,9 @@
 from django.shortcuts import render , get_object_or_404 , redirect , HttpResponse
-from blog.models import Article , Category , Comment , Message
+from blog.models import Article , Category , Comment , Message ,Like
 from django.core.paginator import Paginator
 from .forms import ContactUsFromForm , MessageForm
 from django.views.generic.base import View
+from django.http import JsonResponse
 
 def article_detail(request, slug):
     article = get_object_or_404(Article, slug=slug)
@@ -51,6 +52,21 @@ def contactus(request):
     else:
          form = MessageForm(data = request.POST)
     return render(request , 'blog/contact_us.html' , {'form':form})
+
+
+def like(request , slug , pk):
+    try:
+        like = Like.objects.get(article__slug=slug , user_id=request.user.id)
+        like.delete()
+        return JsonResponse({'response' : "unliked"})
+    except:
+        Like.objects.create(article_id=pk , user_id=request.user.id)
+        return JsonResponse({'response' : "liked"})
+
+
+
+
+
 
 
 
