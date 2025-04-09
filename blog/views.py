@@ -1,7 +1,8 @@
-from django.shortcuts import render , get_object_or_404
+from django.shortcuts import render , get_object_or_404 , redirect , HttpResponse
 from blog.models import Article , Category , Comment , Message
 from django.core.paginator import Paginator
 from .forms import ContactUsFromForm , MessageForm
+from django.views.generic.base import View
 
 def article_detail(request, slug):
     article = get_object_or_404(Article, slug=slug)
