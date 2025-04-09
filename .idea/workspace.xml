@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6347769b-e22a-4c72-87c4-5e4bdb279e10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/templatemo-stand-blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/templatemo-stand-blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/footer_references.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/footer_references.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/head_references.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/head_references.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +185,7 @@
       <workItem from="1744129441804" duration="6363000" />
       <workItem from="1744192362173" duration="5074000" />
       <workItem from="1744203603170" duration="2321000" />
-      <workItem from="1744214753870" duration="8957000" />
+      <workItem from="1744214753870" duration="12439000" />
     </task>
     <servers />
   </component>
